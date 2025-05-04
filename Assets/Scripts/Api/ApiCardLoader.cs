@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -6,12 +7,12 @@ public class ApiCardLoader : MonoBehaviour
 {
     public string apiUrl = "https://www.imtech.com.ar/GAME/api/v1/get_cartas.php";
 
-    public void DescargarCartas(System.Action<System.Collections.Generic.List<CardJsonData>> callback)
+    public void DescargarCartas(System.Action<List<CardJsonData>> callback)
     {
         StartCoroutine(DescargarCartasCoroutine(callback));
     }
 
-    private IEnumerator DescargarCartasCoroutine(System.Action<System.Collections.Generic.List<CardJsonData>> callback)
+    private IEnumerator DescargarCartasCoroutine(System.Action<List<CardJsonData>> callback)
     {
         UnityWebRequest request = UnityWebRequest.Get(apiUrl);
         yield return request.SendWebRequest();
@@ -23,15 +24,15 @@ public class ApiCardLoader : MonoBehaviour
             yield break;
         }
 
-        string json = request.downloadHandler.text;
-        ApiResponse respuesta = JsonUtility.FromJson<ApiResponse>(json);
-        if (respuesta == null || respuesta.data == null)
-        {
-            Debug.LogError("❌ No se pudieron parsear las cartas.");
-            callback?.Invoke(null);
-            yield break;
-        }
+        string json = FixJsonArray(request.downloadHandler.text);
+        ApiResponse response = JsonUtility.FromJson<ApiResponse>(json);
+        callback?.Invoke(response?.data);
+    }
 
-        callback?.Invoke(respuesta.data);
+    private string FixJsonArray(string json)
+    {
+        return "{\"data\":" + json + "}";
     }
 }
+
+

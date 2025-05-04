@@ -4,36 +4,30 @@ using TMPro;
 
 public class CardUI : MonoBehaviour
 {
-    [Header("Text Elements")]
-    public TextMeshProUGUI nombreText;
-    public TextMeshProUGUI descripcionText;
-    public TextMeshProUGUI costoText;
-    public TextMeshProUGUI influenciaText;
-    public TextMeshProUGUI resistenciaText;
+    [Header("Referencias UI")]
+    [SerializeField] private TextMeshProUGUI nombreCartaText;
+    [SerializeField] private TextMeshProUGUI descripcionText;
+    [SerializeField] private TextMeshProUGUI costoPoderPoliticoText;
+    [SerializeField] private TextMeshProUGUI influenciaText;
+    [SerializeField] private TextMeshProUGUI resistenciaText;
+    [SerializeField] private Image ilustracionImage;
 
-    [Header("Image Elements")]
-    public Image ilustracionImage;
-    public Image tipoCartaImage;
+    private ScriptableCard cartaActual;
 
-    private ScriptableCard cardData;
-
-    public void SetupCard(ScriptableCard card)
+    public void Setup(ScriptableCard carta)
     {
-        cardData = card;
-        nombreText.text = card.NombreCarta;
-        descripcionText.text = card.Descripcion;
-        costoText.text = card.CostoPoderPolitico.ToString();
-        influenciaText.text = card.Influencia.ToString();
-        resistenciaText.text = card.Resistencia.ToString();
-        
-        if (card.Ilustracion != null)
-        {
-            ilustracionImage.sprite = card.Ilustracion;
-        }
+        cartaActual = carta;
+
+        nombreCartaText.text = carta.NombreCarta;
+        descripcionText.text = carta.Descripcion;
+        costoPoderPoliticoText.text = carta.CostoPoderPolitico.ToString();
+        influenciaText.text = carta.Influencia.ToString();
+        resistenciaText.text = carta.Resistencia.ToString();
+        ilustracionImage.sprite = carta.Ilustracion;
     }
 
-    public ScriptableCard GetCardData()
+    public ScriptableCard GetCard()
     {
-        return cardData;
+        return cartaActual;
     }
 }

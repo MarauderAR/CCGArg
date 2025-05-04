@@ -9,7 +9,8 @@ public class DeckManager : MonoBehaviour
     public List<ScriptableCard> mazoJugador = new();
     public List<ScriptableCard> mazoEnemigo = new();
 
-    private void Start()
+    // Cambiamos el método Start por Awake para que se inicialicen antes
+    private void Awake()
     {
         CrearMazos();
     }

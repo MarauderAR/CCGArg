@@ -1,43 +1,26 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 
 public class CartaDetalleUI : MonoBehaviour
 {
-    public static CartaDetalleUI Instance;
+    [Header("Referencias UI")]
+    [SerializeField] private TextMeshProUGUI nombreCartaText;
+    [SerializeField] private TextMeshProUGUI descripcionText;
+    [SerializeField] private TextMeshProUGUI influenciaText;
+    [SerializeField] private TextMeshProUGUI resistenciaText;
+    [SerializeField] private Image ilustracionImage;
 
-    [Header("Componentes de la UI")]
-    public TextMeshProUGUI nombreText;
-    public TextMeshProUGUI descripcionText;
-    public TextMeshProUGUI ataqueText;
-    public TextMeshProUGUI defensaText;
-    public Image artImage;
+    private ScriptableCard cartaActual;
 
-    void Awake()
+    public void MostrarDetalleCarta(ScriptableCard carta)
     {
-        // Implementación del patrón Singleton
-        Instance = this;
-        gameObject.SetActive(false); // El panel comienza oculto
-    }
+        cartaActual = carta;
 
-    public void MostrarDetalles(ScriptableCard data)
-    {
-        if (data == null) return;
-
-        // Asigna los datos de la carta a los elementos de la UI
-        nombreText.text = data.NombreCarta;
-        descripcionText.text = data.Descripcion;
-        ataqueText.text = "Ataque: " + data.Influencia.ToString();
-        defensaText.text = "Defensa: " + data.Resistencia.ToString();
-        artImage.sprite = data.Ilustracion;
-
-        // Muestra el panel
-        gameObject.SetActive(true);
-    }
-
-    public void Ocultar()
-    {
-        // Oculta el panel
-        gameObject.SetActive(false);
+        nombreCartaText.text = carta.NombreCarta;
+        descripcionText.text = carta.Descripcion;
+        influenciaText.text = carta.Influencia.ToString();
+        resistenciaText.text = carta.Resistencia.ToString();
+        ilustracionImage.sprite = carta.Ilustracion;
     }
 }

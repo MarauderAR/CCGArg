@@ -45,7 +45,7 @@ public class Deck : MonoBehaviour
         Card cardComponent = cartaGO.GetComponent<Card>();
         if (cardComponent != null)
         {
-            cardComponent.SetupCard(cartaARepartir);
+            cardComponent.SetCardData(cartaARepartir);  // Cambiado de SetupCard a SetCardData
             cartasEnMano.Add(cartaGO);
         }
     }

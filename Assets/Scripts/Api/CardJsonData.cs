@@ -1,18 +1,22 @@
+using System;
 using System.Collections.Generic;
 
-[System.Serializable]
+[Serializable]
 public class CardJsonData
 {
-    public int id { get; set; }
-    public string nombre { get; set; }
-    public string descripcion { get; set; }
-    public int costo { get; set; }
-    public int influencia { get; set; }
-    public int resistencia { get; set; }
+    public string id;
+    public string NombreCarta;
+    public string Descripcion;
+    public int CostoPoderPolitico;
+    public string TipoCarta;
+    public string Ilustracion;
+    public int Influencia;
+    public int Resistencia;
+    public bool AccionInmediata;
 }
 
-[System.Serializable]
+[Serializable]
 public class ApiResponse
 {
-    public List<CardJsonData> data { get; set; }
+    public List<CardJsonData> data;
 }

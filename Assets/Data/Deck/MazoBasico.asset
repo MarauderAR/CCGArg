@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfc0523af9987d41808ac3b24e5ae01, type: 3}
   m_Name: MazoBasico
   m_EditorClassIdentifier: 
-  cardsInCollection:
-  - {fileID: 11400000, guid: 7d6165ef6d6d90d458ef85dbc19b8c0f, type: 2}
-  - {fileID: 11400000, guid: 52d0214735d5eb74f9fa4405750241b1, type: 2}
-  - {fileID: 11400000, guid: fa14cf1633624e44395a699769c3522f, type: 2}
-  - {fileID: 11400000, guid: c3bd145e1beb0454fa1c3134ae13cfaa, type: 2}
-  - {fileID: 11400000, guid: a84466798a2baf040a1dbbf4b87e37f2, type: 2}
-  - {fileID: 11400000, guid: fbd0bd07ecabab647a8e9d53ba92770c, type: 2}
-  - {fileID: 11400000, guid: 6aa8318029f5b2e438501776bad0b995, type: 2}
-  - {fileID: 11400000, guid: 5689e22dc66d3c74f854c44056a95422, type: 2}
-  - {fileID: 11400000, guid: b91a35b062ddd90448ef7247e2d86c99, type: 2}
-  - {fileID: 11400000, guid: e7bd4c084831e5a4fb66c90337ee1a36, type: 2}
-  - {fileID: 11400000, guid: c14eb135e56ac32409d660c5d34f485b, type: 2}
-  - {fileID: 11400000, guid: 44cc03c933ffa4142af566499468e7fc, type: 2}
-  - {fileID: 11400000, guid: d0c3229e8f7b36c45aaa7a769bea7cdf, type: 2}
-  - {fileID: 11400000, guid: a4270ef39299e45469020517517f8da4, type: 2}
+  cartas:
+  - {fileID: 11400000, guid: eff02643af108a04e8c62636c700a66c, type: 2}
+  - {fileID: 11400000, guid: 1116254ae78dea242b412b90b7bc772b, type: 2}
+  - {fileID: 11400000, guid: 50d336eb670db184985489405535233b, type: 2}
+  - {fileID: 11400000, guid: 5aeecfdeeb6efd14ab68f65c5659e95d, type: 2}
+  - {fileID: 11400000, guid: 44ff82435a5880148b9ce27233919c82, type: 2}
+  - {fileID: 11400000, guid: c597cc9a5847b22419874f19eb34e7a3, type: 2}
+  - {fileID: 11400000, guid: 1d51bd69a671c354b99a20fc28bcffed, type: 2}
+  - {fileID: 11400000, guid: e962c5cf021223f4daa85e848d5c1499, type: 2}
+  - {fileID: 11400000, guid: 06016c0af8ba8cd4bad28f6726382c65, type: 2}
+  - {fileID: 11400000, guid: 3475488cec5b4794c8cf18547e1d25df, type: 2}
+  - {fileID: 11400000, guid: f0cbc2187c0674446b989f4939d2529d, type: 2}
+  - {fileID: 11400000, guid: 5dfdda44d260065449a75860598582a2, type: 2}
+  - {fileID: 11400000, guid: b93185b67aaa0bf44a6a0e9adc72d299, type: 2}
+  - {fileID: 11400000, guid: 16bb7df4b7565754ba8315e0f8b3db80, type: 2}
+  - {fileID: 11400000, guid: c6b9229bcfeedc44fbcf1457a4fe3f9f, type: 2}
+  - {fileID: 11400000, guid: 687c84db00752e4459d90965d7271786, type: 2}

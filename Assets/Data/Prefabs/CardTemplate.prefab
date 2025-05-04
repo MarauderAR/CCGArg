@@ -497,13 +497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff3d9ccc266d86489758b72c2ac6703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreText: {fileID: 5700011224071906464}
+  nombreCartaText: {fileID: 5700011224071906464}
   descripcionText: {fileID: 5750928327077944097}
-  costoText: {fileID: 2822898280435611514}
+  costoPoderPoliticoText: {fileID: 2822898280435611514}
   influenciaText: {fileID: 6393653656921321512}
   resistenciaText: {fileID: 749017641635655027}
   ilustracionImage: {fileID: 3937297212190913907}
-  tipoCartaImage: {fileID: 0}
 --- !u!114 &4694481779545801132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5432617a663c5db45b6f01806ecc9684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardData: {fileID: 0}
 --- !u!114 &3557834063799497905
 MonoBehaviour:
   m_ObjectHideFlags: 0

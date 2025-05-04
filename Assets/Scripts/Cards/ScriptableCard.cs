@@ -1,48 +1,27 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Card", menuName = "Cards/Card")]
+[CreateAssetMenu(fileName = "Nueva Carta", menuName = "Cards/Nueva Carta")]
 public class ScriptableCard : ScriptableObject
 {
-    [SerializeField] private string nombreCarta;
-    [SerializeField] private string descripcion;
-    [SerializeField] private int costoPoderPolitico;
-    [SerializeField] private int influencia;
-    [SerializeField] private int resistencia;
-    [SerializeField] private Sprite ilustracion;
-
-    public string NombreCarta 
-    { 
-        get { return nombreCarta; }
-        set { nombreCarta = value; }
-    }
-
-    public string Descripcion 
-    { 
-        get { return descripcion; }
-        set { descripcion = value; }
-    }
-
-    public int CostoPoderPolitico 
-    { 
-        get { return costoPoderPolitico; }
-        set { costoPoderPolitico = value; }
-    }
-
-    public int Influencia 
-    { 
-        get { return influencia; }
-        set { influencia = value; }
-    }
-
-    public int Resistencia 
-    { 
-        get { return resistencia; }
-        set { resistencia = value; }
-    }
-
-    public Sprite Ilustracion 
-    { 
-        get { return ilustracion; }
-        set { ilustracion = value; }
-    }
+    [Header("Identificación")]
+    public string IdUnico;
+    public string NombreCarta;
+    
+    [Header("Estadísticas")]
+    public int CostoPoderPolitico;
+    public int Influencia;
+    public int Resistencia;
+    
+    [Header("Características")]
+    public string Faccion;
+    public string TipoCarta;
+    public string Descripcion;
+    public string Rareza;
+    
+    [Header("Estados")]
+    public bool TieneFueros;
+    public bool AccionInmediata;
+    
+    [Header("Visual")]
+    public Sprite Ilustracion;
 }
